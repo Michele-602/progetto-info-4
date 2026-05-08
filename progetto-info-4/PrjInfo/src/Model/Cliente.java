@@ -9,7 +9,8 @@ package Model;
  * @author nardom
  */
 public class Cliente {
-    private String sesso;
+
+       private String sesso;
     private int eta;
     private String nome;
     private String cognome;
@@ -62,6 +63,7 @@ public class Cliente {
     public void setCodCliente(int codCliente) {
         this.codCliente = codCliente;
     }
+    
      
    
    
