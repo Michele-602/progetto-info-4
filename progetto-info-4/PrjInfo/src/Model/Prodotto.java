@@ -104,27 +104,29 @@ public class Prodotto {
 
 @Override
 public String toString() {
-    // Intestazione prodotto
-    String output = "=== SCHEDA PRODOTTO ===\n";
-    output += "NOME   : " + nome + "\n";
-    output += "CODICE : " + codice + "\n";
-    output += "MEDIA  : " + medVal + " / 5.0\n";
-    output += "-----------------------\n";
-    output += "ELENCO RECENSIONI:\n\n";
-
+    String s = "=== SCHEDA PRODOTTO ===\n";
+    s = s + "NOME   : " + nome + "\n";
+    s = s + "CODICE : " + codice + "\n";
+    s = s + "MEDIA  : " + medVal + " / 5.0\n";
+    s = s + "-----------------------\n";
+    s = s + "ELENCO RECENSIONI:\n";
+    
     if (recensioni.isEmpty()) {
-        output += "   (Nessuna recensione disponibile)\n";
+        s = s + "Nessuna recensione presente.\n";
     } else {
         for (Recensione r : recensioni) {
-            // Qui Java chiama il toString() di Recensione che abbiamo fatto prima
-            output += r.toString() + "\n";
-            output += "---------------------------\n"; // Separatore tra recensioni
+            // Aggiungiamo Nome e Cognome nel riepilogo del prodotto
+            s = s + "[" + r.getIdRecensione() + "] Scritta da: " 
+                  + r.getCliente().getNome() + " " + r.getCliente().getCognome() + "\n";
+            s = s + r.toString() + "\n"; // Chiama il toString della recensione (quello con le stelle)
+            s = s + "---------------------------\n";
         }
     }
-
-    output += "=======================";
-    return output;
+    
+    s = s + "=======================";
+    return s;
 }
+
    
    
 }
