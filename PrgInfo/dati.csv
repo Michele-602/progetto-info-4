@@ -1,0 +1,11 @@
+id_recensione,nome_cliente,cognome,codice_cliente,sesso,eta,nome_prodotto,codice_prodotto,feedback,stelle
+REV0001,Mario,Rossi,1,M,34,Smartphone X1,1001,"Ottima qualità e batteria duratura",5
+REV0002,Laura,Bianchi,2,F,29,Cuffie Wireless Pro,1002,"Audio buono ma connessione instabile",3
+REV0003,Giuseppe,Verdi,3,M,41,Mouse Gaming RGB,1003,"Molto preciso e comodo",4
+REV0004,Anna,Neri,4,F,25,Notebook Air 14,1004,"Leggero e veloce perfetto per lavoro",5
+REV0005,Luca,Ferrari,5,M,37,Tastiera Meccanica K8,1005,"Rumorosa ma eccellente per gaming",4
+REV0006,Sara,Romano,6,F,31,Smartwatch Fit+,1006,"Funzioni utili ma autonomia limitata",3
+REV0007,Davide,Greco,7,M,45,Monitor UltraWide 34,1007,"Immagine spettacolare",5
+REV0008,Elena,Conti,8,F,27,Webcam HD 1080p,1008,"Qualità video discreta",4
+REV0009,Francesco,Gallo,9,M,39,SSD 1TB Turbo,1009,"Velocissimo nel trasferimento dati",5
+REV0010,Martina,Ricci,10,F,22,Speaker Bluetooth Mini,1010,"Compatto ma poco potente",2
