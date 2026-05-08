@@ -57,7 +57,7 @@ public class Prodotto {
         this.recensioni = recensioni;
     }
     
-    ArrayList<Recensione> trovaRecensione(int nstelle){
+   public ArrayList<Recensione> trovaRecensione(int nstelle){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
             if(x.getStelle()==nstelle) b.add(x);
@@ -66,7 +66,7 @@ public class Prodotto {
         
            return b;
     }
-    ArrayList<Recensione> recPos(){
+   public ArrayList<Recensione> recPos(){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
             if(x.getStelle()<=3) b.add(x);
@@ -75,7 +75,7 @@ public class Prodotto {
         
            return b;
     }
-    ArrayList<Recensione> recNeg(){
+   public ArrayList<Recensione> recNeg(){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
             if(x.getStelle()>=3) b.add(x);
@@ -84,7 +84,7 @@ public class Prodotto {
         
            return b;
     }
-    ArrayList<Recensione> recCliente(Cliente c){
+   public ArrayList<Recensione> recCliente(Cliente c){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
             if(x.getCliente()==c)  b.add(x);
@@ -93,7 +93,7 @@ public class Prodotto {
         
            return b;
     }
-    Recensione recCOdice(String codice){
+   public Recensione recCOdice(String codice){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
             if(x.getIdRecensione()==codice)   return x;
