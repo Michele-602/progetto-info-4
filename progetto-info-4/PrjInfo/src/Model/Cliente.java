@@ -10,46 +10,62 @@ package Model;
  */
 public class Cliente {
 
-       private String sesso;
+    private String sesso;
     private int eta;
     private String nome;
     private String cognome;
-     private int codCliente;
+    private int codCliente;
 
     public Cliente(String sesso, int eta, String nome, String cognome, int codCliente) {
-        this.sesso = sesso;
-        this.eta = eta;
+        setSesso(sesso);
+        setEta(eta);
         this.nome = nome;
         this.cognome = cognome;
-        this.codCliente = codCliente;
+        setCodCliente(codCliente);
     }
 
-    public String getSesso() {
-        return sesso;
+    public String getSesso() { 
+       return sesso; 
     }
-
-    public int getEta() {
-        return eta;
+    public int getEta() { 
+       return eta;
     }
-
     public String getNome() {
-        return nome;
+       return nome; 
     }
-
     public String getCognome() {
-        return cognome;
+       return cognome; 
+    }
+    public int getCodCliente() {
+       return codCliente; 
     }
 
-    public int getCodCliente() {
-        return codCliente;
-    }
 
     public void setSesso(String sesso) {
-        this.sesso = sesso;
+
+        if (sesso != null && (sesso.equalsIgnoreCase("M") || sesso.equalsIgnoreCase("F"))) {
+            this.sesso = sesso.toUpperCase();
+        } else {
+            this.sesso = "N.D."; 
+        }
     }
 
     public void setEta(int eta) {
-        this.eta = eta;
+
+        if (eta >= 0 && eta <= 120) {
+            this.eta = eta;
+        } else {
+            this.eta = 0; 
+        }
+    }
+
+    public void setCodCliente(int codCliente) {
+
+        if (codCliente > 0) {
+            this.codCliente = codCliente;
+        } else {
+            this.codCliente = 0;
+        }
     }
 
     public void setNome(String nome) {
@@ -58,10 +74,6 @@ public class Cliente {
 
     public void setCognome(String cognome) {
         this.cognome = cognome;
-    }
-
-    public void setCodCliente(int codCliente) {
-        this.codCliente = codCliente;
     }
     
      
