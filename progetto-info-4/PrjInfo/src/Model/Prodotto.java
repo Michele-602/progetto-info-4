@@ -69,7 +69,7 @@ public class Prodotto {
    public ArrayList<Recensione> recPos(){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
-            if(x.getStelle()<=3) b.add(x);
+            if(x.getStelle()>=3) b.add(x);
                 
         }
         
@@ -78,7 +78,7 @@ public class Prodotto {
    public ArrayList<Recensione> recNeg(){
         ArrayList<Recensione> b = new ArrayList();
         for(Recensione x: recensioni){
-            if(x.getStelle()>=3) b.add(x);
+            if(x.getStelle()<3) b.add(x);
                 
         }
         
