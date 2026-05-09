@@ -1,6 +1,5 @@
 package Controller;
 
-import Controller.Gestore;
 import Model.Cliente;
 import Model.Prodotto;
 import Model.Recensione;
