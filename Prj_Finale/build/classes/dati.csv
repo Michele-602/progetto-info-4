@@ -1,0 +1,18 @@
+id_recensione,nome_cliente,cognome,codice_cliente,sesso,eta,nome_prodotto,codice_prodotto,feedback,stelle
+REV0001,Mario,Rossi,1,M,34,Smartphone X1,1001,"Ottima qualità e batteria duratura",5
+REV0002,Laura,Bianchi,2,F,29,Cuffie Wireless Pro,1002,"Audio buono ma connessione instabile",3
+REV0003,Mario,Rossi,1,M,34,Mouse Gaming RGB,1003,"Molto preciso e comodo",4
+REV0004,Anna,Neri,4,F,25,Notebook Air 14,1004,"Leggero e veloce perfetto per lavoro",5
+REV0005,Luca,Ferrari,5,M,37,Smartphone X1,1001,"Buon telefono ma un po' costoso",4
+REV0006,Sara,Romano,6,F,31,Smartwatch Fit+,1005,"Funzioni utili ma autonomia limitata",3
+REV0007,Mario,Rossi,1,M,34,Smartphone X1,1001,"Fotocamera eccellente",5
+REV0008,Elena,Conti,8,F,27,Webcam HD 1080p,1006,"Qualità video discreta",4
+REV0009,Laura,Bianchi,2,F,29,Smartphone X1,1001,"Molto veloce e intuitivo",5
+REV0010,Luca,Ferrari,5,M,37,Mouse Gaming RGB,1003,"Ottimo per giocare",5
+REV0011,Anna,Neri,4,F,25,Notebook Air 14,1004,"Batteria molto buona",4
+REV0012,Sara,Romano,6,F,31,Cuffie Wireless Pro,1002,"Comode ma audio migliorabile",3
+REV0013,Mario,Rossi,1,M,34,Notebook Air 14,1004,"Perfetto per università",5
+REV0014,Elena,Conti,8,F,27,Smartwatch Fit+,1005,"Design elegante",4
+REV0015,Laura,Bianchi,2,F,29,Mouse Gaming RGB,1003,"Troppo leggero",2
+REV0016,Paolo,Ruffini,999,M,25,micronde,2000,"aaaa",2
+REV0017,Paolo,Ruffini,999,M,25,salame,1007,"buono",2
