@@ -135,9 +135,9 @@ public class LoginGrafico extends javax.swing.JFrame {
         String usernameInserito = txtUser.getText();
         String cognomeInserito = txtCognome.getText();
 
-        File f = new File("recensioni.csv");
+        File f = new File("dati.csv");
         if (f.exists()) {
-            gestore.leggiFile("recensioni.csv");
+            gestore.leggiFile("dati.csv");
         } else {
             System.out.println("File non trovato, inizializzo gestore vuoto.");
         }

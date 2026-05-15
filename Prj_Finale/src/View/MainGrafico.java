@@ -207,23 +207,16 @@ public class MainGrafico extends javax.swing.JFrame {
 
     private void OpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenActionPerformed
         JFileChooser scelta = new JFileChooser();
-
         int risultato = scelta.showOpenDialog(this);
 
         if (risultato == JFileChooser.APPROVE_OPTION) {
-
             File fileScelto = scelta.getSelectedFile();
             gestore = new Gestore();
             gestore.leggiFile(fileScelto.getAbsolutePath());
-
             caricaProdotti();
-
             aggiornaTabella("Tutti");
-
             txtDettagli.setText("Seleziona una recensione...");
-
             Prodotto top = gestore.prodottoTop();
-
             if (top != null) {
                 lblTop.setText("Top prodotto: " + top.getNome());
             } else {
@@ -236,13 +229,9 @@ public class MainGrafico extends javax.swing.JFrame {
         int riga = tabellaRecensioni.getSelectedRow();
 
         if (riga >= 0) {
-
             String id = tabellaRecensioni.getValueAt(riga, 0).toString();
-
             Recensione trovata = null;
-
             for (Recensione r : gestore.getRecensioni()) {
-
                 if (r.getIdRecensione().equals(id)) {
                     trovata = r;
                     break;
@@ -252,17 +241,13 @@ public class MainGrafico extends javax.swing.JFrame {
             if (trovata != null) {
 
                 txtDettagli.setText(trovata.getTesto());
-
                 String stelle = "";
-
                 for (int i = 0; i < trovata.getStelle(); i++) {
                     stelle += "★";
                 }
-
                 for (int i = trovata.getStelle(); i < 5; i++) {
                     stelle += "☆";
                 }
-
                 lblGrafico.setText(stelle);
             }
         }
@@ -272,14 +257,10 @@ public class MainGrafico extends javax.swing.JFrame {
         if (loadingCombo) {
             return;
         }
-
         if (gestore == null || gestore.getRecensioni().isEmpty()) {
             return;
         }
-
-        String selezionato
-                = cmbProdotti.getSelectedItem().toString();
-
+        String selezionato= cmbProdotti.getSelectedItem().toString();
         aggiornaTabella(selezionato);
     }//GEN-LAST:event_cmbProdottiActionPerformed
 
@@ -443,8 +424,7 @@ public class MainGrafico extends javax.swing.JFrame {
         double somma = 0;
         for (Model.Recensione r : gestore.getRecensioni()) {
 
-            if (prodottoSelezionato.equals("Tutti")
-                    || r.getProdotto().getNome().equals(prodottoSelezionato)) {
+            if (prodottoSelezionato.equals("Tutti") || r.getProdotto().getNome().equals(prodottoSelezionato)) {
                 modello.addRow(new Object[]{
                     r.getIdRecensione(),
                     r.getCliente().getNome()
@@ -458,10 +438,7 @@ public class MainGrafico extends javax.swing.JFrame {
             }
         }
         if (!prodottoSelezionato.equals("Tutti") && count > 0) {
-            lblMedia.setText(
-                    "Media: " + (somma / count)
-                    + " | Recensioni: " + count
-            );
+            lblMedia.setText("Media: " + (somma / count) + " | Recensioni: " + count);
         } else {
             lblMedia.setText("Media: -");
         }
