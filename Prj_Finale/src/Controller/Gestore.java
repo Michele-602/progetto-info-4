@@ -188,7 +188,7 @@ public class Gestore {
 
             double media = p.calcolaMedia();
 
-            if (p.getRecensioni().size() > 0 && media > max) {
+            if (media > max) {
                 max = media;
                 top = p;
             }
