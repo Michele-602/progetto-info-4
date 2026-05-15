@@ -65,8 +65,14 @@ public class Prodotto {
         for (Recensione r : recensioni) {
             somma += r.getStelle();
         }
-
-        return somma / recensioni.size();
+        
+        // FIX: preventi DivisionByZeroError
+        // se non ci sono recensioni, restituisce -1 come valore della media
+        // che sicuramente è un valore non valido
+        if (recensioni.isEmpty()) 
+            return somma / recensioni.size();
+        else 
+            return -1;
     }
 
     public ArrayList<Recensione> recensioniPositive() {
